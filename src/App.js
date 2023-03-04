@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import AddUser from "./components/users/AddUser";
 import UserList from "./components/users/UserList";
 
@@ -13,12 +13,12 @@ setUsersList((prevUsersList)=>{
 })
   }
   return (
-    <div className="App">
+   <Fragment>
       <header className="App-header">
        <AddUser onAddUser={addUserHandler}/>
        <UserList users={usersList}/>
       </header>
-    </div>
+      </Fragment>
   );
 }
 
